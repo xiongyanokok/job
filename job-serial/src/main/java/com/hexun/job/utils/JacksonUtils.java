@@ -17,7 +17,7 @@ public class JacksonUtils {
 	/**
 	 * ObjectMapper
 	 */
-	private static ObjectMapper objectMapper = new ObjectMapper();
+	private static final ObjectMapper objectMapper = new ObjectMapper();
 	
 	/**
 	 * 序列化

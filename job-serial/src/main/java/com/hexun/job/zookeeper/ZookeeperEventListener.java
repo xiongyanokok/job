@@ -56,7 +56,7 @@ public class ZookeeperEventListener implements TreeCacheListener {
 	public void childEvent(CuratorFramework client, TreeCacheEvent event) throws Exception {
 		if (event.getType().equals(TreeCacheEvent.Type.NODE_ADDED) || event.getType().equals(TreeCacheEvent.Type.NODE_UPDATED)) {
 			String jobName = new String(event.getData().getData());
-			String path = new String(event.getData().getPath());
+			String path = event.getData().getPath();
 			if (StringUtils.isEmpty(jobName) || StringUtils.isEmpty(path)) {
 				return;
 			}

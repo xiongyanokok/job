@@ -86,10 +86,7 @@ public class TaskSharding implements ApplicationListener<ContextRefreshedEvent> 
 		int shardingItem = shardingContext.getShardingItem();
 				
 		// 判断该分片号是否等于本作业实例的分片项
-		if (shardNo == shardingItem) {
-			return true;
-		}
-		return false;
+		return shardNo == shardingItem;
 	}
 
 }
