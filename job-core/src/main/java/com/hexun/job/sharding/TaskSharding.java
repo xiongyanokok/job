@@ -13,9 +13,10 @@ import com.dangdang.ddframe.job.reg.zookeeper.ZookeeperRegistryCenter;
 /**
  * 任务分片
  * 只有任务分片需要注入：把多个任务分配到多个服务器上执行，资源均衡利用
+ * 
  * <p>
- * &lt;bean id="taskSharding" class="com.hexun.job.common.TaskSharding"&gt;<br/>
- * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property name="registryCenter" ref="registryCenter"/&gt;<br/>
+ * &lt;bean id="taskSharding" class="com.hexun.job.sharding.TaskSharding"&gt;<br>
+ * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property name="registryCenter" ref="registryCenter"/&gt;<br>
  * &lt;/bean&gt;
  * </p>
  * 
